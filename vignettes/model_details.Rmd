@@ -26,7 +26,7 @@ file
 
 ## fars_read()
 This function reads a csv file if existant and creates a data frame tbl. In our case if we want to read the data for the year 2015, the code would be:
-```{r}
+```{r }
 data <- fars_read(file)
 head(data)
 ```
