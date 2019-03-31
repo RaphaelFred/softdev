@@ -70,6 +70,7 @@ fars_read_years <- function(years) {
 #' @importFrom dplyr group_by
 #' @importFrom dplyr summarize
 #' @importFrom tidyr spread
+#' @importFrom dplyr %>%
 #' @note Invalid year values may result in an error and NULL is returned for the specific dataset.
 #' @examples
 #' \dontrun{

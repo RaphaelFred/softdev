@@ -28,5 +28,21 @@ file
 This function reads a csv file if existant and creates a data frame tbl. In our case if we want to read the data for the year 2015, the code would be:
 ```{r }
 data <- fars_read(file)
-head(data)
 ```
+## fars_read_years()
+This function returns the observation "month" and "year" for a list of datasets.
+```{r warning=FALSE}
+data <- fars_read_years(c(2013,2015))
+```
+## fars_summarize_years()
+This function returns a tibble that summarizes the number of observations for each month and each dataset.
+```{r warning=FALSE}
+library(dplyr)
+fars_summarize_years(c(2013,2015))
+```
+## fars_map_state()
+This function plots the occurence of fatal injuries suffered in motor vehicle traffic crashes.
+```{r}
+fars_map_state(50, 2013)
+```
+
