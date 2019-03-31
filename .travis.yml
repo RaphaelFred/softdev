@@ -3,3 +3,6 @@
 language: R
 sudo: required
 cache: packages
+
+before_install:
+  - Rscript -e 'install.packages("dplyr")'
