@@ -14,7 +14,7 @@ fars_read <- function(filename) {
   if(!file.exists(filename))
     stop("file '", filename, "' does not exist")
   data <- suppressMessages({
-    readr::read_csv(filename, progress = FALSE)
+    readr::read_csv(system.file("extdata", file, package="softdev"), progress = FALSE)
   })
   dplyr::tbl_df(data)
 }
@@ -31,7 +31,6 @@ fars_read <- function(filename) {
 make_filename <- function(year) {
   year <- as.integer(year)
   file <- sprintf("accident_%d.csv.bz2", year)
-  system.file("extdata", file, package="softdev")
 }
 
 #' Creates a list of tibbles
