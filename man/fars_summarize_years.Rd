@@ -19,5 +19,7 @@ This function returns a tibble that summarizes the number of observations for ea
 Invalid year values may result in an error and NULL is returned for the specific dataset.
 }
 \examples{
+\dontrun{
 fars_summarize_years(c("2013", "2014"))
+}
 }

@@ -4,8 +4,10 @@
 #' @param filename Name of the file that is read into R
 #' @return This function will return a data frame of format tbl_df. (For further information look at tbl_df{dplyr})
 #' @importFrom readr read_csv
-#' @examples
+#' @examples#'
+#' \dontrun{
 #' fars_read("accident_2015.csv.bz2")
+#' }
 #' @importFrom dplyr tbl_df
 #' @export
 fars_read <- function(filename) {
@@ -40,7 +42,9 @@ make_filename <- function(year) {
 #' @importFrom dplyr select
 #' @note Invalid year values may result in an error and NULL is returned.
 #' @examples
+#' \dontrun{
 #' fars_read_years(c("2013", "2014"))
+#' }
 #' @export
 fars_read_years <- function(years) {
   lapply(years, function(year) {
@@ -68,7 +72,9 @@ fars_read_years <- function(years) {
 #' @importFrom tidyr spread
 #' @note Invalid year values may result in an error and NULL is returned for the specific dataset.
 #' @examples
+#' \dontrun{
 #' fars_summarize_years(c("2013", "2014"))
+#' }
 #' @export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
@@ -91,8 +97,10 @@ fars_summarize_years <- function(years) {
 #' @importFrom graphics points
 #' @note Error may occur if the state input is invalid or if there are no accidents to plot.
 #' @examples
+#' \dontrun{
 #' fars_map_state(1, 2015)
 #' fars_map_state(50, 2013)
+#' }
 #' @export
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)

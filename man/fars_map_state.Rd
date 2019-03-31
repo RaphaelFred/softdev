@@ -21,6 +21,8 @@ This function plots the occurence of fatal injuries suffered in motor vehicle tr
 Error may occur if the state input is invalid or if there are no accidents to plot.
 }
 \examples{
+\dontrun{
 fars_map_state(1, 2015)
 fars_map_state(50, 2013)
+}
 }

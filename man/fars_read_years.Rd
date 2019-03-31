@@ -19,5 +19,7 @@ This function returns the observation "month" and "year" for a list of datasets.
 Invalid year values may result in an error and NULL is returned.
 }
 \examples{
+\dontrun{
 fars_read_years(c("2013", "2014"))
+}
 }

@@ -16,5 +16,8 @@ This function will return a data frame of format tbl_df. (For further informatio
 This function reads a csv file if existant and creates a data frame tbl.
 }
 \examples{
+#'
+\dontrun{
 fars_read("accident_2015.csv.bz2")
+}
 }
